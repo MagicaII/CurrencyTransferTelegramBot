@@ -16,11 +16,11 @@ class CryptoConverter:
         try:
             quote_ticker = keys[quote]
         except:
-            raise APIException('Такой валюты нет в доступном списке валют')
+            raise APIException(f'Такой валюты "{quote}" нет в доступном списке валют')
         try:
             base_ticker = keys[base]
         except:
-            raise APIException('Такой валюты нет в доступном списке валют')
+            raise APIException(f'Такой валюты "{base}" нет в доступном списке валют')
         try:
             amount_ticker = float(amount)
         except:
